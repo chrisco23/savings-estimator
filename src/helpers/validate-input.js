@@ -1,6 +1,11 @@
 export const validateInput = (question, vars, input) => {
+  // New "Question" type if for informational card, no question, inputType = ''
+  if (question.inputType === '') {
+    return {error: null, status: true};
+  }
   // If it's empty
   if (!input) {
+    debugger;
     const error = 'This field is required!';
     return {error, status: false};
   }
