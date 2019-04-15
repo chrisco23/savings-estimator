@@ -41,13 +41,13 @@ const BusinessResults = ({
         </div>
   ] :[
       <div key="no-savings" className="wwse-results-box wwse-results-box-business">
-		      <h3>Your Benefit</h3>
-	    </div>,
-	    <div key="message-box" className="wwse-message-box wwse-message-box-business">
-		    <p>Universal Healthcare means high quality, comprehensive coverage (including vision and dental) for every employee, regardless of number of hours worked. A healthy work force is a more productive work force.</p>
-	    </div>
+          <h3>Your Benefit</h3>
+      </div>,
+      <div key="message-box" className="wwse-message-box wwse-message-box-business">
+        <p>Universal Healthcare means high quality, comprehensive coverage (including vision and dental) for every employee, regardless of number of hours worked. A healthy work force is a more productive work force.</p>
+      </div>
   ]
-		}
+    }
 
       <div className="wwse-percentages">
         <div className="wwse-row">
@@ -55,7 +55,7 @@ const BusinessResults = ({
             Employees Covered<br />Under Current System
           </p>
           <p>
-            Employees Covered<br />Under I-1600
+            Employees Covered<br />with Whole Washington Health Trust
           </p>
         </div>
         <div className="wwse-row">
@@ -105,7 +105,7 @@ const BusinessResults = ({
           <div className="wwse-results-disclaimer">
             <span>
               <em>
-                <sup>*</sup> Results vary based on company size and individual differences in Gross Pay. We're working on an enhanced tool that takes those variables into account and displays an even more accurate result. Stay tuned.
+                <sup>*</sup> Results vary based on company size and individual differences in Gross Pay. 
               </em>
             </span>
           </div>
