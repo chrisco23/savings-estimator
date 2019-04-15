@@ -38,6 +38,8 @@ export const individualCalc = (
 		sizeOfHousehold = parseInt(screen2,10),
 		numberOfAdults = parseInt(screen3, 10),
 		adjustedGrossIncome = parseInt(removeCommas(screen4),10),
+		grossPayPerYear = parseInt(screen5,10),
+		soleProprietorIncome = parseInt(screen6,10),
 		capitalGains = parseInt(removeCommas(screen7),10),
 		currentPremiums = parseInt(removeCommas(screen8),10),
 		currentAdditionalMedical = parseInt(removeCommas(screen9),10);
@@ -52,6 +54,8 @@ export const individualCalc = (
 		}
 	}
 
+	const PHAFromWages = Math.max(0, (grossPayPerYear - (15000 - grossPayPerYear * .25)) * .02);
+	const PHAFromSelfEmployment = Math.max(0, (soleProprietorIncome - (15000 - soleProprietorIncome * .25)) * .02);
 	const currentCosts = currentPremiums + (Math.round(currentAdditionalMedical/12));
 	const fplCheck = fpl(sizeOfHousehold);
 	const houseHoldIncome = adjustedGrossIncome + capitalGains;
@@ -99,5 +103,8 @@ export const individualCalc = (
 	}else{
 		savings = parseInt(currentCosts*12,10) - ((parseInt(premium,10) * parseInt(numberOfAdults,10)) + parseInt(capitalGainsContribution,10) + (parseInt(income,10)));
 	}
-	return { fpl, income, numberOfAdults, sizeOfHousehold, savings, capitalGainsContribution, householdPremium, premium, totalPersonalContribution, currentCosts, currentAdditionalMedical, currentPremiums };
+	return { 
+		fpl, income, numberOfAdults, sizeOfHousehold, savings, capitalGainsContribution, 
+		householdPremium, premium, totalPersonalContribution, currentCosts, 
+		currentAdditionalMedical, currentPremiums, PHAFromWages, PHAFromSelfEmployment };
 };

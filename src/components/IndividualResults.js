@@ -18,12 +18,38 @@ const IndividualResults = ({
     capitalGainsContribution,
     premium,
     savings,
-    numberOfAdults
+    numberOfAdults,
+    PHAFromWages,
+    PHAFromSelfEmployment
   }}) => {
 
   const MONTH = 12;
   return(
     <div className="wwse-results">
+      <div className="wwse-results-total-box wwse-results-box-new">
+        <div
+          className={`wwse-results-header wwse-results-header-new ${savings > 0 ? 'new-cost' :''}`}
+          key="savings-label"
+        >
+          {savings > 0 ? 
+            <div>
+              <h3>CONGRATULATIONS!</h3>
+              <h3>TOTAL SAVINGS!</h3>
+            </div> :
+            <div>
+              <h3>YOUR BENEFIT</h3>
+            </div>
+          }
+          </div>
+        {savings > 0 ?
+        <div className="wwse-results-total" key="savings-value">
+          <p className="wwse-results-total-top wwse-results-total-total">
+            ${addCommas(Math.floor(savings / MONTH))}/month</p>
+          <p className="wwse-results-total-bottom">(${savings}/year)</p>
+        </div> : ''
+        }
+      </div>
+      <MessageBox key="ind-nosavings-result"/>
 
       <div className="wwse-results-box">
         <div className="wwse-results-header">
@@ -32,10 +58,10 @@ const IndividualResults = ({
 
         <div className="wwse-results-total">
           <p className="wwse-results-total-top wwse-results-total-current">
-            ${addCommas(Math.floor(currentCosts))}/mo
+            ${addCommas(Math.floor(currentCosts))}/month
           </p>
           <p className="wwse-results-total-bottom">
-            (${addCommas(currentCosts*12)}/yr)
+            (${addCommas(currentCosts*12)}/year)
           </p>
         </div>
       </div>
@@ -58,7 +84,7 @@ const IndividualResults = ({
                 parseInt(numberOfAdults, 10)) / 12
               ))
             }
-            /mo
+            /month
           </p>
           <p className="wwse-results-total-bottom">
             ($
@@ -72,8 +98,18 @@ const IndividualResults = ({
                   parseInt(numberOfAdults, 10)
                 ))
               }
-              /yr)
+              /year)
           </p>
+        </div>
+      </div>
+
+      <div className="wwse-results-total-box">
+        <div className="wwse-results-header wwse-results-header-contributions">
+          <h3>PERSONAL HEALTH ASSESSMENT</h3>
+        </div>
+        <div className="wwse-results-contributions-container">
+          <p> ${PHAFromWages} From Payroll Wages</p>
+          <p> ${PHAFromSelfEmployment} From Self-Employment Earnings</p>
         </div>
       </div>
 
@@ -83,11 +119,6 @@ const IndividualResults = ({
         </div>
         <div className="wwse-results-contributions-container">
 
-          <ContributionsRow
-            link="https://i1600-wholewashington.nationbuilder.com/income_tax_contribution"
-            title="Income Tax Contribution"
-            contribution={income}
-          />
           <ContributionsRow
             link="https://i1600-wholewashington.nationbuilder.com/investment_profit_contribution"
             title="Investment Profit Contribution"
@@ -120,7 +151,7 @@ const IndividualResults = ({
                 {
                   addCommas(Math.floor(premium / MONTH))
                 }
-                /mo {
+                /month {
                   sizeOfHousehold > 1 &&
                   `x${numberOfAdults}`
                 }
@@ -131,25 +162,7 @@ const IndividualResults = ({
             </p>
           </div>
         </div>
-        <div className="wwse-results-total-box wwse-results-box-new">
-          <div
-            className={`wwse-results-header wwse-results-header-new ${savings > 0 ? 'new-cost' :''}`}
-            key="savings-label"
-          >
-            <h3>
-              {savings > 0 ? 'TOTAL SAVINGS' : 'YOUR BENEFIT'}
-            </h3>
-          </div>
-          {savings > 0 ?
-          <div className="wwse-results-total" key="savings-value">
-            <p className="wwse-results-total-top wwse-results-total-total">
-              ${addCommas(Math.floor(savings / MONTH))}/mo</p>
-            <p className="wwse-results-total-bottom">(${savings}/yr)</p>
-          </div> : ''
-          }
-        </div>
 
-      <MessageBox key="ind-nosavings-result"/>
       <CalculationDocs/>
     </div>
   )
