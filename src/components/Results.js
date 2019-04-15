@@ -23,13 +23,18 @@ class Results extends Component {
       );
 		}
 		else {
-		  this.props.getIndividualResults(
+			// These correspond to the 9 question-screens.  For coding simplicitly, we're
+			// counting the 9th screen as a question-screen, even though it's purely informational.
+			this.props.getIndividualResults(
         rmDecAndRound(vars[0]),
         rmDecAndRound(vars[1]),
         rmDecAndRound(vars[2]),
         rmDecAndRound(vars[3]),
         rmDecAndRound(vars[4]),
-        rmDecAndRound(vars[5])
+        rmDecAndRound(vars[5]),
+        rmDecAndRound(vars[6]),
+        rmDecAndRound(vars[7]),
+        rmDecAndRound(vars[8]),
       );
 		}
 	}

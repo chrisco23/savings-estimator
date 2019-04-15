@@ -5,7 +5,6 @@ export const validateInput = (question, vars, input) => {
   }
   // If it's empty
   if (!input) {
-    debugger;
     const error = 'This field is required!';
     return {error, status: false};
   }

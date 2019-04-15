@@ -1,6 +1,21 @@
 import { removeCommas } from './helper-functions';
 
-export const individualCalc = (a,b,c,d,e,f)=>{
+/* TODO:  The original code used vars a,b,c, etc. and didn't allow for 
+ * changes in page order.  So *important* for now this still depends on
+ * page order but of course this should be improved!
+ */
+
+export const individualCalc = (
+	screen2, // sizeOfHousehold 
+	screen3, // numberOfAdults
+	screen4, // adjustedGrossIncome
+	screen5, // grossPayPerYear
+	screen6, // soleProprietorIncome
+	screen7, // capitalGains
+	screen8, // currentPremiums
+	screen9, // currentAdditionalMedical
+	screen10, // info only, no input, no calc.
+	)=>{
 	const
 		prem = 134,
 		fpl1808 = 4320,
@@ -20,12 +35,12 @@ export const individualCalc = (a,b,c,d,e,f)=>{
 		income = 0,
 		capitalGainsContribution = 0,
 		householdPremium = 0,
-		sizeOfHousehold = parseInt(a,10),
-		adjustedGrossIncome = parseInt(removeCommas(b),10),
-		capitalGains = parseInt(removeCommas(c),10),
-		numberOfAdults = parseInt(d, 10),
-		currentPremiums = parseInt(removeCommas(e),10),
-		currentAdditionalMedical = parseInt(removeCommas(f),10);
+		sizeOfHousehold = parseInt(screen2,10),
+		numberOfAdults = parseInt(screen3, 10),
+		adjustedGrossIncome = parseInt(removeCommas(screen4),10),
+		capitalGains = parseInt(removeCommas(screen7),10),
+		currentPremiums = parseInt(removeCommas(screen8),10),
+		currentAdditionalMedical = parseInt(removeCommas(screen9),10);
 
 	function fpl(size) {
 		if (size > 8) {

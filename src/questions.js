@@ -65,7 +65,7 @@ const questions = {
 				'and collected by your employer, and may be paid by your employer ' +
 				'as a benefit of employment.',
 			showIcon:true,
-      id: 'ltcg'
+      id: 'gppy'
 		},
 		{
 			questionText:"Sole Proprietor Income - Earnings from Self-Employment",
@@ -78,7 +78,7 @@ const questions = {
 				'to this assessment.<br><br>This tax is assessed yearly and paid with other ' +
 				'business excise taxes.',
       showIcon:true,
-      id: 'ltcg'
+      id: 'spi'
 		},
 		{
 			questionText:"Your Net Long-Term Capital Gains",
@@ -92,7 +92,7 @@ const questions = {
 					'Investment Profit Contribution.' + 
 					"<br><em>Next we'll review the insurance industry costs you get to " +
 					'<b>eliminate</b> from your current expenses...</em>',
-				showIcon:true,
+			showIcon:true,
       id: 'ltcg'
 		},
 		{
@@ -115,7 +115,7 @@ const questions = {
 					'<li>Deductibles</li></ul>' + 
 					'Note: the most you\'ll pay for prescriptions with I-1600 Universal Healthcare is $250' +
 					'per adult per year.',
-					showIcon:true,
+			showIcon:true,
       id:'yoopc'
 		},
 		{
