@@ -221,10 +221,19 @@
 .wwse-results-box {
 	width:100%;
 }
+
 .wwse-results-box-new{
-	color:white;
+	color: white;
 	background: rgb(211,31,65);
-	background: linear-gradient(180deg, rgba(173,2,35,1) 0%, rgba(237,7,50,1) 39%, rgba(255,78,78,1) 67%, rgba(211,31,65,1) 100%);
+	background: linear-gradient(to bottom, #84e32b 0%,#63c10a 100%);
+}
+
+.wwse-results-box-new h3 {
+	color: white;
+}
+
+.wwse-results-box-new p {
+	margin: 0;
 }
 
 .wwse-results-total-box{
@@ -494,7 +503,7 @@
 }
 
 .wwse-col-savings{
-	background: linear-gradient(180deg, rgba(173,2,35,1) 0%, rgba(237,7,50,1) 39%, rgba(255,78,78,1) 67%, rgba(211,31,65,1) 100%);
+	background: linear-gradient(to bottom, #84e32b 0%,#63c10a 100%);
 	color:white;
 }
 
