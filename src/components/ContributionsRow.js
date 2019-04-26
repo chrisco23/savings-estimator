@@ -15,7 +15,7 @@ const ContributionsRow = ({link, title, contribution}) => {
         </a>
       </p>
       <p className="wwse-contributions-row-result">
-        ${addCommas(Math.floor(contribution / MONTH))}/mo
+        ${addCommas(Math.floor(contribution / MONTH))}/month
       </p>
     </div>
   )

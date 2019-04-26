@@ -35,6 +35,8 @@ export const individualCalc = (
 		income = 0,
 		capitalGainsContribution = 0,
 		householdPremium = 0,
+		healthcareContributionFromWages = 0,
+		healthcareContributionFromSelfEmployment = 0,
 		sizeOfHousehold = parseInt(screen2,10),
 		numberOfAdults = parseInt(screen3, 10),
 		adjustedGrossIncome = parseInt(removeCommas(screen4),10),
@@ -54,8 +56,24 @@ export const individualCalc = (
 		}
 	}
 
-	const PHAFromWages = Math.max(0, (grossPayPerYear - (15000 - grossPayPerYear * .25)) * .02);
-	const PHAFromSelfEmployment = Math.max(0, (soleProprietorIncome - (15000 - soleProprietorIncome * .25)) * .02);
+	if(parseInt(grossPayPerYear, 10) < 15000) {
+		healthcareContributionFromWages = 0;
+	} else if (parseInt(grossPayPerYear, 10) > 15000 && parseInt(grossPayPerYear, 10) <= 60000) {
+		healthcareContributionFromWages = 
+			(parseInt(grossPayPerYear, 10) - (15000 - parseInt(grossPayPerYear, 10) * .25)) * .02;
+	} else if  (parseInt(grossPayPerYear, 10) > 60000) {
+		healthcareContributionFromWages = parseInt(grossPayPerYear, 10) * .02;
+	}
+
+	if(parseInt(grossPayPerYear, 10) < 15000) {
+		healthcareContributionFromSelfEmployment = 0;
+	} else if (parseInt(soleProprietorIncome, 10) > 15000 && parseInt(soleProprietorIncome, 10) <= 60000) {
+		healthcareContributionFromSelfEmployment = 
+			(parseInt(soleProprietorIncome, 10) - (15000 - parseInt(soleProprietorIncome, 10) * .25)) * .02;
+	} else if  (parseInt(soleProprietorIncome, 10) > 60000) {
+		healthcareContributionFromSelfEmployment = parseInt(soleProprietorIncome, 10) * .02;
+	}
+
 	const currentCosts = currentPremiums + (Math.round(currentAdditionalMedical/12));
 	const fplCheck = fpl(sizeOfHousehold);
 	const houseHoldIncome = adjustedGrossIncome + capitalGains;
@@ -95,7 +113,9 @@ export const individualCalc = (
 		premium = 0;
 	}
 
-	const totalPersonalContribution = (parseInt(income,10) + parseInt(capitalGainsContribution,10) + parseInt(premium, 10));
+	const totalPersonalContribution = parseInt(income,10) + parseInt(capitalGainsContribution,10) + 
+		parseInt(premium, 10) + parseInt(healthcareContributionFromSelfEmployment, 10) + 
+		parseInt(healthcareContributionFromWages, 10);
 
 	let savings = 0;
 	if(sizeOfHousehold<2){
@@ -106,5 +126,5 @@ export const individualCalc = (
 	return { 
 		fpl, income, numberOfAdults, sizeOfHousehold, savings, capitalGainsContribution, 
 		householdPremium, premium, totalPersonalContribution, currentCosts, 
-		currentAdditionalMedical, currentPremiums, PHAFromWages, PHAFromSelfEmployment };
+		currentAdditionalMedical, currentPremiums, healthcareContributionFromWages, healthcareContributionFromSelfEmployment };
 };

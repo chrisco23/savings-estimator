@@ -19,8 +19,8 @@ const IndividualResults = ({
     premium,
     savings,
     numberOfAdults,
-    PHAFromWages,
-    PHAFromSelfEmployment
+    healthcareContributionFromWages,
+    healthcareContributionFromSelfEmployment
   }}) => {
 
   const MONTH = 12;
@@ -81,10 +81,10 @@ const IndividualResults = ({
                 (parseInt(capitalGainsContribution, 10) +
                 parseInt(income, 10) +
                 parseInt(premium, 10) *
-                parseInt(numberOfAdults, 10)) / 12
+                parseInt(numberOfAdults, 10))
               ))
             }
-            /month
+            /year
           </p>
           <p className="wwse-results-total-bottom">
             ($
@@ -108,8 +108,14 @@ const IndividualResults = ({
           <h3>PERSONAL HEALTH ASSESSMENT</h3>
         </div>
         <div className="wwse-results-contributions-container">
-          <p> ${PHAFromWages} From Payroll Wages</p>
-          <p> ${PHAFromSelfEmployment} From Self-Employment Earnings</p>
+          <ContributionsRow
+            title="Healthcare Contribution from Wages"
+            contribution={parseInt(healthcareContributionFromWages)}
+          />
+          <ContributionsRow
+            title="Healthcare Contribution from Self Employment"
+            contribution={parseInt(healthcareContributionFromSelfEmployment)}
+          />
         </div>
       </div>
 
