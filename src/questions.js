@@ -68,7 +68,7 @@ const questions = {
       id: 'gppy'
 		},
 		{
-			questionText:"Sole Proprietor Income - Earnings from Self-Employment",
+			questionText:"Sole Proprietor Income - Net Profits from Self-Employment",
 			inputType:'text',
 			unit:'$',
 			tip:'Use Line 31 from your Schedule C (2017 and 2018).<br><br>This amount is ' +
@@ -137,10 +137,11 @@ const questions = {
 		}
 	],
 	business:[
-		{questionText:'Annual Total Payroll Costs', inputType:'text',unit:'$'},
-		{questionText:'Current Annual Healthcare Costs', inputType:'text',unit:'$'},
+		{questionText:'Annual Total Payroll Costs', inputType:'text',unit:'$', tip: '&nbsp'},
+		{questionText:'Current Annual Healthcare Costs', inputType:'text',unit:'$', tip: '&nbsp'},
 		{questionText:'Total Number of Employees',
 			inputType:'select-box',
+			tip: '&nbsp',
 			options: ['<10',"10-24","25-99","100-999",">1000"]
 		},
 		{questionText:'Percentage of Employees Covered', inputType:'range',
