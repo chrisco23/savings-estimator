@@ -65,7 +65,7 @@ export const individualCalc = (
 		healthcareContributionFromWages = parseInt(grossPayPerYear, 10) * .02;
 	}
 
-	if(parseInt(grossPayPerYear, 10) < 15000) {
+	if(parseInt(soleProprietorIncome, 10) < 15000) {
 		healthcareContributionFromSelfEmployment = 0;
 	} else if (parseInt(soleProprietorIncome, 10) > 15000 && parseInt(soleProprietorIncome, 10) <= 60000) {
 		healthcareContributionFromSelfEmployment = 
