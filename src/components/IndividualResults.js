@@ -84,7 +84,7 @@ const IndividualResults = ({
                 parseInt(numberOfAdults, 10))
               ))
             }
-            /year
+            /month
           </p>
           <p className="wwse-results-total-bottom">
             ($
