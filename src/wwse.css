@@ -211,6 +211,11 @@
 }
 
 /*--------- Results Styles --------*/
+
+.wwse-results-container p {
+	margin: 0;
+}
+
 .wwse-results {
 	display: flex;
 	flex-direction: column;
