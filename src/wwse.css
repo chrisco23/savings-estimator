@@ -211,6 +211,11 @@
 }
 
 /*--------- Results Styles --------*/
+
+.wwse-results-container p {
+	margin: 0;
+}
+
 .wwse-results {
 	display: flex;
 	flex-direction: column;
@@ -230,10 +235,6 @@
 
 .wwse-results-box-new h3 {
 	color: white;
-}
-
-.wwse-results-box-new p {
-	margin: 0;
 }
 
 .wwse-results-total-box{
