@@ -51,15 +51,10 @@ const BusinessResults = ({
 
       <div className="wwse-percentages">
         <div className="wwse-row">
-          <p>
-            Employees Covered<br />Under Current System
-          </p>
-          <p>
-            Employees Covered<br />with Whole Washington Health Trust
-          </p>
-        </div>
-        <div className="wwse-row">
           <div className="wwse-col">
+            <p>
+              Employees Covered<br />Under Current System
+            </p>
             <span
               style={rangeStyle}
               className="wwse-percentage wwse-result-percentage"
@@ -68,6 +63,9 @@ const BusinessResults = ({
             </span>
           </div>
           <div className="wwse-col">
+            <p>
+              Employees Covered<br />with Whole Washington Health Trust
+            </p>
             <span className="wwse-percentage wwse-percentage-i1600 wwse-result-percentage">100%</span>
           </div>
         </div>
