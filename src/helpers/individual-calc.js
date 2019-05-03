@@ -32,7 +32,7 @@ export const individualCalc = (
 
 	let
 		premium = 0,
-		income = 0,
+		/*income = 0, */
 		capitalGainsContribution = 0,
 		householdPremium = 0,
 		healthcareContributionFromWages = 0,
@@ -92,11 +92,13 @@ export const individualCalc = (
 	} else{
 	}
 
+	/*
 	if(adjustedGrossIncome < 15000){
 		income = 0;
 	}else if(adjustedGrossIncome >= 15000){
 		income = parseInt(((adjustedGrossIncome-15000)*0.01),10);
 	}
+	*/
 
 	if(capitalGains < 15000){
 		capitalGainsContribution = 0;
@@ -108,12 +110,13 @@ export const individualCalc = (
 	}
 
 	if(parseInt(sizeOfHousehold,10) === 1 && parseInt(numberOfAdults,10) === 0){
-		income = 0;
+		//income = 0;
 		capitalGainsContribution = 0;
 		premium = 0;
 	}
 
-	const totalPersonalContribution = parseInt(income,10) + parseInt(capitalGainsContribution,10) + 
+	const totalPersonalContribution = // parseInt(income,10) + 
+		parseInt(capitalGainsContribution,10) + 
 		parseInt(premium, 10) + parseInt(healthcareContributionFromSelfEmployment, 10) + 
 		parseInt(healthcareContributionFromWages, 10);
 
@@ -121,10 +124,12 @@ export const individualCalc = (
 	if(sizeOfHousehold<2){
 		savings = parseInt(currentCosts*12,10) - totalPersonalContribution;
 	}else{
-		savings = parseInt(currentCosts*12,10) - ((parseInt(premium,10) * parseInt(numberOfAdults,10)) + parseInt(capitalGainsContribution,10) + (parseInt(income,10)));
+		savings = parseInt(currentCosts*12,10) - ((parseInt(premium,10) * 
+		//parseInt(numberOfAdults,10)) + parseInt(capitalGainsContribution,10) + (parseInt(income,10)));
+		parseInt(numberOfAdults,10)) + parseInt(capitalGainsContribution,10));
 	}
 	return { 
-		fpl, income, numberOfAdults, sizeOfHousehold, savings, capitalGainsContribution, 
+		fpl, /* income, */ numberOfAdults, sizeOfHousehold, savings, capitalGainsContribution, 
 		householdPremium, premium, totalPersonalContribution, currentCosts, 
 		currentAdditionalMedical, currentPremiums, healthcareContributionFromWages, healthcareContributionFromSelfEmployment };
 };

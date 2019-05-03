@@ -129,6 +129,7 @@ const IndividualResults = ({
             link="https://i1600-wholewashington.nationbuilder.com/investment_profit_contribution"
             title="Investment Profit Contribution"
             contribution={capitalGainsContribution}
+            monthlyBreakdown="false"
           />
 
           {
@@ -150,7 +151,8 @@ const IndividualResults = ({
 
             <div className="wwse-contributions-row">
               <p className="wwse-contributions-row-heading">
-                <a href="https://i1600-wholewashington.nationbuilder.com/monthly_premium" target="_blank" rel="noopener noreferrer">Per Adult Monthly Premium</a><sup>*</sup>
+                <a href="https://i1600-wholewashington.nationbuilder.com/monthly_premium" 
+                target="_blank" rel="noopener noreferrer">Per Adult Monthly Premium</a><sup>*</sup>
               </p>
               <p className="wwse-contributions-row-result">
                 $

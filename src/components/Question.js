@@ -147,7 +147,7 @@ class Question extends Component {
 
         <div className="wwse-controls">
           <div>
-            <a onClick={(e)=>e.preventDefault()}>
+            <a href="_blank" onClick={(e)=>e.preventDefault()}>
               <div className="wwse-circle">
                 <i
                   style={lBtnVisibile} onClick={this.handleBackBtn}
@@ -164,7 +164,7 @@ class Question extends Component {
             </button>
           </div>
           <div>
-            <a onClick={(e)=>e.preventDefault()}>
+            <a href="_blank" onClick={(e)=>e.preventDefault()}>
               <div className="wwse-circle">
                 <i
                   style={rBtnVisibile}
@@ -189,7 +189,7 @@ class Question extends Component {
             }
           </div>
             {Parser(tip)}
-            <a href={link && link[0]} target="_blank">{link && link[1]}</a>
+            <a href={link && link[0]} target="_blank" rel="noopener noreferrer">{link && link[1]}</a>
           </div>
         }
       </form>
