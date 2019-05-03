@@ -428,7 +428,6 @@
 }
 .wwse-cost-bars-container {
 	width: 100%;
-	border-bottom: 1px solid #686868;
 }
 
 .wwse-color-bar {
@@ -444,7 +443,6 @@
 	align-self: center;
 	padding: 0.5em;
 	background: #d6d6d6;
-	box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2);
 	margin-bottom: 10px;
 }
 
@@ -482,6 +480,16 @@
 	width: 100%;
 	text-align: center;
 	font-size: 1em;
+}
+
+.wwse-row p{
+	margin: 1em;
+}
+
+@media (max-width: 767.98px) {
+    .wwse-row {
+        flex-flow: row wrap;
+    }
 }
 
 .wwse-col {
@@ -551,7 +559,6 @@
 	margin: 0 auto;
 	padding-top: 0.5em;
 	padding-bottom: 1em;
-	border-bottom: 1px solid #686868;
 	width: 100%;
 }
 
