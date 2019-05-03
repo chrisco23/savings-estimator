@@ -2,7 +2,7 @@ import React from 'react';
 import { addCommas } from '../helpers/helper-functions';
 
 const MONTH = 12;
-const ContributionsRow = ({link, title, contribution}) => {
+const ContributionsRow = ({link, title, contribution, monthlyBreakdown = true}) => {
   return(
     <div className="wwse-contributions-row">
       <p className="wwse-contributions-row-heading">
@@ -15,7 +15,9 @@ const ContributionsRow = ({link, title, contribution}) => {
         </a>
       </p>
       <p className="wwse-contributions-row-result">
-        ${addCommas(Math.floor(contribution / MONTH))}/month
+        ${monthlyBreakdown !== "false" ? 
+          addCommas(Math.floor(contribution / MONTH)) :
+          addCommas(Math.floor(contribution))}/{monthlyBreakdown !== "false" ? 'month' : 'year'}
       </p>
     </div>
   )

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MessageBox = () => {
-  const url = 'https://d3n8a8pro7vhmx.cloudfront.net/wholewashington/pages/144/attachments/original/1522975117/Yes1600Credo.pdf?1522975117';
+  //const url = 'https://d3n8a8pro7vhmx.cloudfront.net/wholewashington/pages/144/attachments/original/1522975117/Yes1600Credo.pdf?1522975117';
   return(
     <div className="wwse-message-box">
     {/*
