@@ -117,16 +117,20 @@ export const individualCalc = (
 
 	const totalPersonalContribution = // parseInt(income,10) + 
 		parseInt(capitalGainsContribution,10) + 
-		parseInt(premium, 10) + parseInt(healthcareContributionFromSelfEmployment, 10) + 
+		parseInt(premium, 10) * parseInt(numberOfAdults,10) + 
+		parseInt(healthcareContributionFromSelfEmployment, 10) + 
 		parseInt(healthcareContributionFromWages, 10);
 
 	let savings = 0;
 	if(sizeOfHousehold<2){
 		savings = parseInt(currentCosts*12,10) - totalPersonalContribution;
 	}else{
+		savings = parseInt(currentCosts*12,10) - totalPersonalContribution;
+		/*
 		savings = parseInt(currentCosts*12,10) - ((parseInt(premium,10) * 
 		//parseInt(numberOfAdults,10)) + parseInt(capitalGainsContribution,10) + (parseInt(income,10)));
 		parseInt(numberOfAdults,10)) + parseInt(capitalGainsContribution,10));
+		*/
 	}
 	return { 
 		fpl, /* income, */ numberOfAdults, sizeOfHousehold, savings, capitalGainsContribution, 

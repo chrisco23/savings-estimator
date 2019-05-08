@@ -74,31 +74,14 @@ const IndividualResults = ({
         <div className="wwse-results-total wwse-results-total-new">
           <p className="wwse-results-total-top wwse-results-total-projected">
             $
-            { sizeOfHousehold < 2 ?
-              addCommas(Math.floor(totalPersonalContribution / MONTH))
-              :
-              addCommas(Math.floor(
-                (parseInt(capitalGainsContribution, 10) +
-                parseInt(income, 10) +
-                parseInt(premium, 10) *
-                parseInt(numberOfAdults, 10))
-              ))
-            }
+            { addCommas(Math.floor(totalPersonalContribution / MONTH)) }
             /month
           </p>
           <p className="wwse-results-total-bottom">
-            ($
-              { sizeOfHousehold < 2 ?
-                addCommas(totalPersonalContribution)
-                :
-                addCommas(Math.floor(
-                  parseInt(capitalGainsContribution, 10) +
-                  parseInt(income, 10) +
-                  parseInt(premium, 10) *
-                  parseInt(numberOfAdults, 10)
-                ))
-              }
-              /year)
+            (
+            $
+            { addCommas(Math.floor(totalPersonalContribution)) }
+            /year)
           </p>
         </div>
       </div>
