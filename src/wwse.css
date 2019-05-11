@@ -228,13 +228,15 @@
 }
 
 .wwse-results-box-new{
-	color: white;
+	/*color: white;*/
+	color: #d41f41;
 	background: rgb(211,31,65);
-	background: linear-gradient(to bottom, #84e32b 0%,#63c10a 100%);
+	/*background: linear-gradient(to bottom, #84e32b 0%,#63c10a 100%);*/
+	background: linear-gradient(to bottom, #daeaa7 0%,#b6c859 100%);
 }
 
 .wwse-results-box-new h3 {
-	color: white;
+	/*color: white;*/
 }
 
 .wwse-results-total-box{
@@ -257,12 +259,13 @@
 }
 
 .wwse-results-header-new > h3 {
-	color: white !important;
+	/*color: white !important;*/
 }
 
 .wwse-results-header-contributions{
 	background:lightgrey;
 	color:black;
+	margin-top: 20px;
 }
 
 .wwse-results-total {
@@ -512,7 +515,8 @@
 }
 
 .wwse-col-savings{
-	background: linear-gradient(to bottom, #84e32b 0%,#63c10a 100%);
+	/*background: linear-gradient(to bottom, #84e32b 0%,#63c10a 100%);*/
+	background: linear-gradient(to bottom, #daeaa7 0%,#b6c859 100%);
 	color:white;
 }
 
