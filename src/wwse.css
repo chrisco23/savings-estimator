@@ -36,6 +36,10 @@
 }
 
 /*******Opening Screen********/
+.wwse-intro-box {
+	max-width: 500px;
+	margin: 0 auto 20px auto;
+}
 
 .wwse-select-button {
 	width: 100%;
