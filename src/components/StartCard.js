@@ -12,7 +12,7 @@ class StartCard extends Component {
 
   render() {
     return [
-      <div className="wwse-select-box">
+      <div className="wwse-intro-box">
         <p>This calculator provides an estimate of how the Whole Washington 
         Health Plan would impact you and your budget.</p>
       </div>,
