@@ -34,7 +34,7 @@ const IndividualResults = ({
           {savings > 0 ? 
             <div>
               <h3>CONGRATULATIONS!</h3>
-              <h3>TOTAL SAVINGS!</h3>
+              <h3>TOTAL SAVINGS</h3>
             </div> :
             <div>
               <h3>YOUR BENEFIT</h3>
@@ -45,7 +45,7 @@ const IndividualResults = ({
         <div className="wwse-results-total" key="savings-value">
           <p className="wwse-results-total-top wwse-results-total-total">
             ${addCommas(Math.floor(savings / MONTH))}/month</p>
-          <p className="wwse-results-total-bottom">(${savings}/year)</p>
+          <p className="wwse-results-total-bottom">(${addCommas(savings)}/year)</p>
         </div> : ''
         }
       </div>
@@ -92,11 +92,11 @@ const IndividualResults = ({
         </div>
         <div className="wwse-results-contributions-container">
           <ContributionsRow
-            title="Healthcare Contribution from Wages"
+            title="Employee Payroll Deduction"
             contribution={parseInt(healthcareContributionFromWages)}
           />
           <ContributionsRow
-            title="Healthcare Contribution from Self Employment"
+            title="Self-Employment Contribution"
             contribution={parseInt(healthcareContributionFromSelfEmployment)}
           />
 

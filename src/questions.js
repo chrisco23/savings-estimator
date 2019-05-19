@@ -12,9 +12,9 @@ const questions = {
 				error:'Please enter a household size between 1-20.'
 			},
 			tip:'The size of your household includes yourself, your spouse if you have ' +
-				'one, and any individuals that qualify as dependents.<br><br><br>  This will be used to ' +
-				'determine where your household falls on the Federal Poverty Level, which will ' +
-				'then be used to determine your Monthly Premium.',
+				'one, and any individuals that qualify as dependents.<br><br><br>  This ' + 
+				'number will be used to determine where your household falls on the ' + 
+				'Federal Poverty Level.',
       showIcon:true,
       id: 'soh'
 		},
@@ -26,71 +26,65 @@ const questions = {
 				error:'Number of Adults over 19 cannot exceed total household size!'
 			},
 			defaultValue:1,
-			tip: 'This will be used to determine where your household falls on the ' +
-				'Federal Poverty Level, which will then be used to determine your ' +
-				'Monthly Premium',
+			tip: 'This number will be used to determine how many people in the ' +
+				'household will pay a Monthly Premium.',
 			tipSize: '1.3em',
       showIcon:false,
       id: 'noa'
 		},
 		{
 			questionText:"Your Adjusted Gross Income (AGI)",
+			questionSubtext:"Enter your AGI or MAGI, not Gross Income",
 			inputType:'text',
 			unit:'$',
 			tip: "<p>Adjusted gross income (AGI) is an individual or joint couple's " +
-				'total gross income minus specific deductions. Use your AGI, NOT gross ' +
-				" income. To find your AGI, refer to last year's tax return or use the " +
+				'total gross income minus specific deductions. income. To find your ' + 
+				'AGI, refer to last year\'s tax return or use the ' +
 				'<a href="http://money.cnn.com/tmp/networth2.html">AGI Calculator</a>.' +
 				'</p><table class="agi-table"><tr><th><strong>If you filed...</strong>' +
-				'</th><th><strong>Look for line...</strong></th></tr><tr><td>Form 1040</td>' +
-				'<td>37</td></tr><tr><td>Form 1040A (2017)</td><td>21</td></tr><tr><td>' +
-				'Form 1040EZ (2017)</td><td>4</td></tr></table>' + 
-				'<p>Your Monthly Premium amount depends on where you fall on the Federal ' +
-				'Poverty Level using Modified Adjusted Gross Income (MAGI).  For most, ' +
-				'or similar to MAGI.  If you know your MAGI, enter it above, but for the ' +
-				'purpose of this estimator, AGI is sufficient.</p>',
+				'</th><th><strong>Look for line...</strong></th></tr><tr><td>Form 1040 (2018)</td>' +
+				'<td>37</td></tr><tr><td>Form 1040A (2018)</td><td>21</td></tr><tr><td>' +
+				'Form 1040EZ (2018)</td><td>4</td></tr></table>' + 
+				'This amount is used in conjunction with household size to determine the ' +
+				'Monthly Premium.<p>Note: your employer may choose to pay this amount on ' +
+				'your behalf as an employment benefit.</p>',
 			tipSize:'0.8em',
-//			link:['http://money.cnn.com/tmp/networth2.html','Take me to the AGI Calculator first...'],
       showIcon:true,
       id: 'agi'
 		},
 		{
-			questionText: "Gross Pay Per Year - Wages from an Employer",
+			questionText: "Wages from an Employer",
+			questionSubtext: "Enter the total Gross Pay Per Year for all wage earners in the household",
 			inputType:'text',
 			unit:'$',
-			tip: 'These are your wages from an employer.  If you are 65 years or ' +
-				"older, enter '0'.<br><br>This amount is used to calculate your Personal Health Security " +
-				'Assessment from Payroll(link forthcoming).  Use your pay stubs to ' +
-				'determine your gross pay for the year.  This tax is assessed quarterly ' +
-				'and collected by your employer, and may be paid by your employer ' +
-				'as a benefit of employment.',
+			tip: 'If you are 65 years or ' +
+				"older, enter '0'.<br><br>This amount is used to calculate your Employee Payroll Deduction." +
+				'This tax is assessed quarterly and collected by your employer' +
+				'<p>Note: your employer may choose to pay this amount on your behalf as an employment benefit.</p>',
 			showIcon:true,
       id: 'gppy'
 		},
 		{
-			questionText:"Sole Proprietor Income - Net Profits from Self-Employment",
+			questionText:"Profits from Self-Employment",
+			questionSubtext:"Enter the total Net Profits for all sole proprietors in the household",
 			inputType:'text',
 			unit:'$',
-			tip:'Use Line 31 from your Schedule C (2017 and 2018).<br><br>This amount is ' +
-				'used to calculate your Personal Health Security Assessment from ' +
-				'Self-Employment(link forthcoming).<br><br>If Net Profits from ' + 
-				'Self-Employment are less than $15,000, the individual is not subject ' +
-				'to this assessment.<br><br>This tax is assessed yearly and paid with other ' +
-				'business excise taxes.',
+			tip:'Use the mount in Line 31 from your Schedule C (2017 and 2018).<br><br>This amount is ' +
+				'used to calculate the Self-Employment Contribution.' + 
+				'<ul><li>If Net Profits from Self-Employment are less than $15,000, the tax does not apply</li>' +
+				'<li>This tax is assessed yearly and paid with other business excise taxes.</li></ul>',
       showIcon:true,
       id: 'spi'
 		},
 		{
 			questionText:"Your Net Long-Term Capital Gains",
+			questionSubtext:"Enter your profits made from investments held longer than 12 months",
 			inputType:'text',
 			unit:'$',
-			tip:'Net Long-Term Capital Gains are the profits made from investments ' +
-					'held for longer than 12 months, for example, profits earned from the ' +
-					'sale of stocks. This tax contribution will not apply to Home Sales, ' + 
-					'Farm Income or Retirement Accounts.<br><br>If you file Schedule D, ' +
-					'look for line item 15.  This amount will be used to calculate your ' +
-					'Investment Profit Contribution.' + 
-					"<br><em>Next we'll review the insurance industry costs you get to " +
+			tip:'Use the amount in Line 15 from your Schedule D (2017 and 2018).' +
+					'<ul><li>This tax contribution will not apply to Home Sales, Farm Income or Retirement Accounts</li></ul>' +
+					'This amount will be used to calculate your Investment Profit Contribution.' +
+					"<br><em>Next we'll review the insurance costs you get to " +
 					'<b>eliminate</b> from your current expenses...</em>',
 			showIcon:true,
       id: 'ltcg'
@@ -113,27 +107,10 @@ const questions = {
 					'<li>Medical bills not covered by insurance, including:</li>' + 
 					'<li>Dental, Vision, and Hearing expenses</li></ul><li>Emergency Room or Clinic Visits</li>' +
 					'<li>Deductibles</li></ul>' + 
-					'Note: the most you\'ll pay for prescriptions with I-1600 Universal Healthcare is $250' +
-					'per adult per year.',
+					'Note: the most you\'ll pay for prescriptions with the Whole Washington Health Plan is $250' +
+					'per adult per year if a generic prescription is not available.',
 			showIcon:true,
       id:'yoopc'
-		},
-		{
-			questionText: "Universal Healthcare Benefits",
-			inputType: '',
-			unit: '',
-			tip: 'Whether you save or pay a little more, there are undeniable ' + 
-				'benefits that apply to all. Most prescriptions are fully covered! ' +
-				'And if you need a non-generic prescription, the most you’ll pay is ' +
-				'$250 per year!  You can see the doctor you want. There are no ' +
-				'networks to worry about. You won’t need separate plans for vision ' +
-				'or dental or mental health services. They’re all included! Audiology ' +
-				'too! Companies are still able to attract the best job candidates by ' +
-				'paying for their employee’s premium and/or personal health assessment ' +
-				'as part of benefits package. It’s up to them! There are no ' +
-				'deductibles or surprise out-of-pocket costs. No one will go bankrupt ' +
-				'because they got sick. Healthcare isn’t tied to a job or spouse or ' +
-				'salary. This is real freedom!'
 		}
 	],
 	business:[
