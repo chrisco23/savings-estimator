@@ -88,7 +88,7 @@ const IndividualResults = ({
 
       <div className="wwse-results-total-box">
         <div className="wwse-results-header wwse-results-header-contributions">
-          <h3>PERSONAL HEALTH ASSESSMENT</h3>
+          <h3>Projected Contributions</h3>
         </div>
         <div className="wwse-results-contributions-container">
           <ContributionsRow
@@ -99,14 +99,6 @@ const IndividualResults = ({
             title="Healthcare Contribution from Self Employment"
             contribution={parseInt(healthcareContributionFromSelfEmployment)}
           />
-        </div>
-      </div>
-
-      <div className="wwse-results-total-box">
-        <div className="wwse-results-header wwse-results-header-contributions">
-          <h3>PROJECTED CONTRIBUTIONS</h3>
-        </div>
-        <div className="wwse-results-contributions-container">
 
           <ContributionsRow
             link="https://i1600-wholewashington.nationbuilder.com/investment_profit_contribution"
