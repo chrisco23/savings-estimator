@@ -11,10 +11,10 @@ const questions = {
 				val: 20,
 				error:'Please enter a household size between 1-20.'
 			},
-			tip:'The size of your household includes yourself, your spouse if you have ' +
-				'one, and any individuals that qualify as dependents.<br><br><br>  This ' + 
-				'number will be used to determine where your household falls on the ' + 
-				'Federal Poverty Level.',
+			tip:'<p>The size of your household includes yourself, your spouse if you have ' +
+				'one, and any individuals that qualify as dependents.<p>' + 
+				'<p>This number will be used to determine where your household falls on the ' + 
+				'Federal Poverty Level.</p>',
       showIcon:true,
       id: 'soh'
 		},
@@ -26,10 +26,10 @@ const questions = {
 				error:'Number of Adults over 19 cannot exceed total household size!'
 			},
 			defaultValue:1,
-			tip: 'This number will be used to determine how many people in the ' +
-				'household will pay a Monthly Premium.',
+			tip: '<p>This number will be used to determine how many people in the household will pay a ' +
+				'<a href="https://wholewashington.org/monthly-premium/" rel="noopener noreferrer" target="_blank">Monthly Premium</a>.</p>',
 			tipSize: '1.3em',
-      showIcon:false,
+      showIcon:true,
       id: 'noa'
 		},
 		{
@@ -40,14 +40,14 @@ const questions = {
 			tip: "<p>Adjusted gross income (AGI) is an individual or joint couple's " +
 				'total gross income minus specific deductions. income. To find your ' + 
 				'AGI, refer to last year\'s tax return or use the ' +
-				'<a href="http://money.cnn.com/tmp/networth2.html">AGI Calculator</a>.' +
-				'</p><table class="agi-table"><tr><th><strong>If you filed...</strong>' +
+				'<a href="http://money.cnn.com/tmp/networth2.html" rel="noopener noreferrer" target="_blank">AGI Calculator</a>.</p>' +
+				'<table class="agi-table"><tr><th><strong>If you filed...</strong>' +
 				'</th><th><strong>Look for line...</strong></th></tr><tr><td>Form 1040 (2018)</td>' +
 				'<td>37</td></tr><tr><td>Form 1040A (2018)</td><td>21</td></tr><tr><td>' +
 				'Form 1040EZ (2018)</td><td>4</td></tr></table>' + 
-				'This amount is used in conjunction with household size to determine the ' +
-				'Monthly Premium.<p>Note: your employer may choose to pay this amount on ' +
-				'your behalf as an employment benefit.</p>',
+				'<p>This amount is used in conjunction with household size to determine the ' +
+				'<a href="https://wholewashington.org/monthly-premium/" rel="noopener noreferrer" target="_blank">Monthly Premium</a>.</p>' +
+				'<p>Note: your employer may choose to pay this amount on your behalf as an employment benefit.</p>',
 			tipSize:'0.8em',
       showIcon:true,
       id: 'agi'
@@ -57,11 +57,12 @@ const questions = {
 			questionSubtext: "Enter the total Gross Pay Per Year for all wage earners in the household",
 			inputType:'text',
 			unit:'$',
-			tip: 'If you are 65 years or ' +
-				"older, enter '0'.<br><br>This amount is used to calculate your Employee Payroll Deduction." +
-				'This tax is assessed quarterly and collected by your employer' +
+			tip: '<p>If you are 65 years or older, enter "0".</p>' +
+				'<p>This amount is used to calculate your ' +
+				'<a href="https://wholewashington.org/employee-payroll-deduction/" rel="noopener noreferrer" target="_blank">Employee Payroll Deduction</a>. ' +
+				'This tax is assessed quarterly and collected by your employer.</p>' +
 				'<p>Note: your employer may choose to pay this amount on your behalf as an employment benefit.</p>',
-			showIcon:true,
+      showIcon:true,
       id: 'gppy'
 		},
 		{
@@ -69,8 +70,8 @@ const questions = {
 			questionSubtext:"Enter the total Net Profits for all sole proprietors in the household",
 			inputType:'text',
 			unit:'$',
-			tip:'Use the mount in Line 31 from your Schedule C (2017 and 2018).<br><br>This amount is ' +
-				'used to calculate the Self-Employment Contribution.' + 
+			tip:'<p>Use the mount in Line 31 from your Schedule C (2017 and 2018).</p><p>This amount is used to calculate the ' +
+				'<a href="https://wholewashington.org/self-employment-contribution/" rel="noopener noreferrer" target="_blank">Self-Employment Contribution</a>.</p>' + 
 				'<ul><li>If Net Profits from Self-Employment are less than $15,000, the tax does not apply</li>' +
 				'<li>This tax is assessed yearly and paid with other business excise taxes.</li></ul>',
       showIcon:true,
@@ -81,20 +82,21 @@ const questions = {
 			questionSubtext:"Enter your profits made from investments held longer than 12 months",
 			inputType:'text',
 			unit:'$',
-			tip:'Use the amount in Line 15 from your Schedule D (2017 and 2018).' +
-					'<ul><li>This tax contribution will not apply to Home Sales, Farm Income or Retirement Accounts</li></ul>' +
-					'This amount will be used to calculate your Investment Profit Contribution.' +
-					"<br><em>Next we'll review the insurance costs you get to " +
-					'<b>eliminate</b> from your current expenses...</em>',
-			showIcon:true,
+			tip:'<p>Use the amount in Line 15 from your Schedule D (2017 and 2018).</p>' +
+				'<ul><li>This tax contribution will not apply to Home Sales, Farm Income or Retirement Accounts</li></ul>' +
+				'<p>This amount will be used to calculate your ' + 
+				'<a href="https://wholewashington.org/investment-profit-contribution/" rel="noopener noreferrer" target="_blank">Investment Profit Contribution</a>.</p>' +
+				"<p><em>Next we'll review the insurance costs you get to " +
+				'<b>eliminate</b> from your current expenses...</em></p>',
+      showIcon:true,
       id: 'ltcg'
 		},
 		{
 			questionText:"Your Current Monthly Healthcare Premiums",
 			inputType:'text',
 			unit:'$',
-			tip:'<p>Include Monthly Premiums for Medical, Dental (if applicable) and Vision (if applicable).' +
-					'</p> <p>Remember to include costs for each member of household.</p>',
+			tip:'<p>Include Monthly Premiums for Medical, Dental (if applicable) and Vision (if applicable).</p>' +
+				'<p>Remember to include costs for each member of household.</p>',
       showIcon:true,
       id: 'hcprems'
 		},
@@ -102,14 +104,14 @@ const questions = {
 			questionText:"Your Current Yearly Out-of-Pocket Costs",
 			inputType:'text',
 			unit:'$',
-			tip:'<p>Include costs incurred over the course of the year for every member of your ' +
-					'household, such as:</p><ul><li>Co-Pays</li><li>Prescriptions<sup>*</sup></li>' +
-					'<li>Medical bills not covered by insurance, including:</li>' + 
-					'<li>Dental, Vision, and Hearing expenses</li></ul><li>Emergency Room or Clinic Visits</li>' +
-					'<li>Deductibles</li></ul>' + 
-					'Note: the most you\'ll pay for prescriptions with the Whole Washington Health Plan is $250' +
-					'per adult per year if a generic prescription is not available.',
-			showIcon:true,
+			tip:'<p>Include costs incurred over the course of the year for every member of your household, such as:</p>' +
+				'<ul><li>Co-Pays</li><li>Prescriptions<sup>*</sup></li>' +
+				'<li>Medical bills not covered by insurance, including:</li>' + 
+				'<li>Dental, Vision, and Hearing expenses</li><li>Emergency Room or Clinic Visits</li>' +
+				'<li>Deductibles</li></ul>' + 
+				'<p><sup>*</sup>The most you\'ll pay for prescriptions with the Whole Washington Health Plan is $250' +
+				'per adult per year if a generic prescription is not available.</p>',
+      showIcon:true,
       id:'yoopc'
 		}
 	],

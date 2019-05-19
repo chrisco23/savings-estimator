@@ -92,16 +92,18 @@ const IndividualResults = ({
         </div>
         <div className="wwse-results-contributions-container">
           <ContributionsRow
+            link="https://wholewashington.org/employee-payroll-deduction/"
             title="Employee Payroll Deduction"
             contribution={parseInt(healthcareContributionFromWages)}
           />
           <ContributionsRow
+            link="https://wholewashington.org/self-employment-contribution/"
             title="Self-Employment Contribution"
             contribution={parseInt(healthcareContributionFromSelfEmployment)}
           />
 
           <ContributionsRow
-            link="https://i1600-wholewashington.nationbuilder.com/investment_profit_contribution"
+            link="https://wholewashington.org/investment-profit-contribution/"
             title="Investment Profit Contribution"
             contribution={capitalGainsContribution}
             monthlyBreakdown="false"
@@ -126,7 +128,7 @@ const IndividualResults = ({
 
             <div className="wwse-contributions-row">
               <p className="wwse-contributions-row-heading">
-                <a href="https://i1600-wholewashington.nationbuilder.com/monthly_premium" 
+                <a href="https://wholewashington.org/monthly-premium/" 
                 target="_blank" rel="noopener noreferrer">Per Adult Monthly Premium</a><sup>*</sup>
               </p>
               <p className="wwse-contributions-row-result">
@@ -136,7 +138,7 @@ const IndividualResults = ({
                 }
                 /month {
                   sizeOfHousehold > 1 &&
-                  `x${numberOfAdults}`
+                  `x ${numberOfAdults}`
                 }
               </p>
             </div>
