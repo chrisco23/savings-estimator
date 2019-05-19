@@ -77,7 +77,7 @@ class Question extends Component {
   }
 
   render() {
-    const {question: { id, showIcon, questionText, unit, inputType, options, tip, link, tipSize}, vars, index, range, questionArray} = this.props;
+    const {question: { id, showIcon, questionText, questionSubtext, unit, inputType, options, tip, link, tipSize}, vars, index, range, questionArray} = this.props;
 
     let lBtnVisibile, rBtnVisibile={};
     if(index<0){
@@ -91,6 +91,8 @@ class Question extends Component {
       <form onSubmit={this.handleSubmit}>
         <div className="wwse-label">
           <h3>{questionText}</h3>
+          {questionSubtext &&
+          <h4>{questionSubtext}</h4>}
         </div>
         <div className="wwse-input-box">
         {unit && <i className="fa fa-1x fa-usd wwse-dollar-sign"></i>}
