@@ -109,7 +109,7 @@ const questions = {
 				'<li>Medical bills not covered by insurance, including:</li>' + 
 				'<li>Dental, Vision, and Hearing expenses</li><li>Emergency Room or Clinic Visits</li>' +
 				'<li>Deductibles</li></ul>' + 
-				'<p><sup>*</sup>The most you\'ll pay for prescriptions with the Whole Washington Health Plan is $250' +
+				'<p><sup>*</sup>The most you\'ll pay for prescriptions with the Whole Washington Health Plan is $250 ' +
 				'per adult per year if a generic prescription is not available.</p>',
       showIcon:true,
       id:'yoopc'

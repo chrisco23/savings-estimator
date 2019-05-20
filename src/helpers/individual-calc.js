@@ -14,7 +14,6 @@ export const individualCalc = (
 	screen7, // capitalGains
 	screen8, // currentPremiums
 	screen9, // currentAdditionalMedical
-	screen10, // info only, no input, no calc.
 	)=>{
 	const
 		prem = 134,
