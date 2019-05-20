@@ -1,8 +1,8 @@
 {
-  "name": "form-faction",
+  "name": "savings-estimator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://marcaaron.github.io/yes-on-1600",
+  "homepage": "https://github.com/chrisco23/savings-estimator",
   "dependencies": {
     "html-react-parser": "^0.7.0",
     "react": "^16.2.0",

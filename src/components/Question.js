@@ -77,13 +77,14 @@ class Question extends Component {
   }
 
   render() {
-    const {question: { id, showIcon, questionText, questionSubtext, unit, inputType, options, tip, link, tipSize}, vars, index, range, questionArray} = this.props;
+    const {question: { id, showIcon, questionText, questionSubtext, unit, 
+      inputType, options, tip, link, tipSize}, vars, index, range, questionArray} = this.props;
 
     let lBtnVisibile, rBtnVisibile={};
     if(index<0){
       lBtnVisibile = {visibility:'hidden'}
     };
-    if(index===-1 || (index>0 && !questionArray[index])){
+    if(index===-1 || (index>0 && !questionArray[index+1])){
       rBtnVisibile = {visibility:'hidden'}
     }
 

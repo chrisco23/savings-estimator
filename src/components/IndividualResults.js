@@ -78,8 +78,7 @@ const IndividualResults = ({
             /month
           </p>
           <p className="wwse-results-total-bottom">
-            (
-            $
+            ($
             { addCommas(Math.floor(totalPersonalContribution)) }
             /year)
           </p>
