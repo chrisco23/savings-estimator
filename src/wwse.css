@@ -243,6 +243,7 @@
 	max-width: 500px;
 	margin: 0 auto;
 	text-align: left;
+	color: #444444;
 }
 
 .wwse-results-total-box{
@@ -264,10 +265,6 @@
 	background:transparent;
 }
 
-.wwse-results-header-new > h3 {
-	/*color: white !important;*/
-}
-
 .wwse-results-header-contributions{
 	background:lightgrey;
 	color:black;
@@ -277,7 +274,6 @@
 .wwse-results-total {
 	width: 100%;
 	text-align: center;
-	/*padding:0 0 1em 0;*/
 	background:transparent;
 }
 
@@ -513,7 +509,6 @@
 	font-size: calc(20px + 1.0vw);
 	font-weight: 400;
 	margin:0.2em 0;
-	/*color: white !important;*/
 }
 
 .wwse-results-business-sub-heading{
@@ -521,10 +516,8 @@
 }
 
 .wwse-col-savings{
-	/*background: linear-gradient(to bottom, #84e32b 0%,#63c10a 100%);*/
 	background: linear-gradient(to bottom, #daeaa7 0%,#b6c859 100%);
 	padding: 20px 0;
-	/*color:white;*/
 }
 
 .wwse-col-savings>a{
