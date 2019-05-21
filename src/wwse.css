@@ -345,6 +345,10 @@
 	text-align: left;
 }
 
+sup {
+	color: #d41f41;
+}
+
 /* Business Question Input Styles */
 
 .wwse-select-input {
