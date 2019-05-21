@@ -94,7 +94,7 @@ const IndividualResults = ({
         <div className="wwse-results-contributions-container">
           <ContributionsRow
             link="https://wholewashington.org/employee-payroll-deduction/"
-            title="Employee Payroll Deduction<sup>*</sup>"
+            title="Employee Payroll Deduction*"
             contribution={parseInt(healthcareContributionFromWages)}
           />
           <ContributionsRow
@@ -130,7 +130,7 @@ const IndividualResults = ({
             <div className="wwse-contributions-row">
               <p className="wwse-contributions-row-heading">
                 <a href="https://wholewashington.org/monthly-premium/" 
-                target="_blank" rel="noopener noreferrer">Per Adult Monthly Premium<sup>*</sup></a>
+                target="_blank" rel="noopener noreferrer">Per Adult Monthly Premium*</a>
               </p>
               <p className="wwse-contributions-row-result">
                 $
@@ -144,7 +144,7 @@ const IndividualResults = ({
               </p>
             </div>
             <p className="wwse-premium-disclaimer">
-              <sup>*</sup> Employers may choose to pay these amounts as part of their benefits package.
+              *Employers may choose to pay these amounts as part of their benefits package.
             </p>
           </div>
         </div>
