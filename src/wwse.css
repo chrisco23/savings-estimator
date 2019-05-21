@@ -233,16 +233,16 @@
 }
 
 .wwse-results-box-new{
-	/*color: white;*/
 	color: #d41f41;
 	background: rgb(211,31,65);
-	/*background: linear-gradient(to bottom, #84e32b 0%,#63c10a 100%);*/
 	background: linear-gradient(to bottom, #daeaa7 0%,#b6c859 100%);
 	padding: 20px 0;
 }
 
-.wwse-results-box-new h3 {
-	/*color: white;*/
+.benefits-message {
+	max-width: 500px;
+	margin: 0 auto;
+	text-align: left;
 }
 
 .wwse-results-total-box{
@@ -305,7 +305,7 @@
 }
 
 .wwse-results-contributions-container {
-	padding: 10px 10px 0 10px;
+	padding: 10px 10px 10px 10px;
 	width: 100%;
 	max-width: 500px;
 	margin: 0 auto;
@@ -342,7 +342,7 @@
 .wwse-premium-disclaimer {
 	text-align: center;
 	padding: 0.7em 1.5em;
-	font-size: 0.8em;
+	font-size: 0.8em !important;
 }
 
 .wwse-message-box {
