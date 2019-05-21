@@ -36,8 +36,10 @@ const IndividualResults = ({
               <h3>CONGRATULATIONS!</h3>
               <h3>TOTAL SAVINGS</h3>
             </div> :
-            <div>
-              <h3>YOUR BENEFIT</h3>
+            <div className="benefits-message" >
+              <p>Whether you pay more or save, Universal Healthcare comes with life-changing benefits. 
+              Read more about the freedom, the peace-of-mind, and <a href="https://wholewashington.org/benefits/" 
+              target="_blank" rel="noopener noreferrer">what all is included here</a>.</p>
             </div>
           }
           </div>
@@ -146,7 +148,15 @@ const IndividualResults = ({
             </p>
           </div>
         </div>
-
+        {savings > 0 ? 
+        <div className="wwse-results-total-box wwse-results-box-new">
+          <div className="benefits-message" >
+              <p>Whether you pay more or save, Universal Healthcare comes with life-changing benefits. 
+              Read more about the freedom, the peace-of-mind, and <a href="https://wholewashington.org/benefits/" 
+              target="_blank" rel="noopener noreferrer">what all is included here</a>.</p>
+          </div>
+        </div>
+        : ''}
       <CalculationDocs/>
     </div>
   )
