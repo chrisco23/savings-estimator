@@ -240,6 +240,8 @@
 }
 
 .benefits-message {
+	box-sizing: border-box;
+	padding: 0 10px;
 	max-width: 500px;
 	margin: 0 auto;
 	text-align: left;
@@ -301,6 +303,7 @@
 }
 
 .wwse-results-contributions-container {
+	box-sizing: border-box;
 	padding: 10px 10px 10px 10px;
 	width: 100%;
 	max-width: 500px;
@@ -343,10 +346,6 @@
 
 .wwse-message-box {
 	text-align: left;
-}
-
-sup {
-	color: #d41f41;
 }
 
 /* Business Question Input Styles */
