@@ -80,12 +80,14 @@ class Question extends Component {
     const {question: { id, showIcon, questionText, questionSubtext, unit, 
       inputType, options, tip, link, tipSize}, vars, index, range, questionArray} = this.props;
 
+    let nextOrSubmit = 'Next';
     let lBtnVisibile, rBtnVisibile={};
     if(index<0){
       lBtnVisibile = {visibility:'hidden'}
     };
     if(index===-1 || (index>0 && !questionArray[index+1])){
-      rBtnVisibile = {visibility:'hidden'}
+      rBtnVisibile = {visibility:'hidden'};
+      nextOrSubmit = 'Submit';
     }
 
     return (
@@ -163,7 +165,7 @@ class Question extends Component {
             <button
               className="submit"
               type="submit">
-              Next
+              {nextOrSubmit}
             </button>
           </div>
           <div>

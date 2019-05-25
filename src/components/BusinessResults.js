@@ -110,8 +110,15 @@ const BusinessResults = ({
           <CalculationDocs/>
         </div>
       )}
+      <div className="wwse-startover">
+        <button onClick={refreshPage}>Start Over</button>
+      </div>
     </div>
   );
+}
+
+function refreshPage() { 
+  window.parent.location = window.parent.location.href; 
 }
 
 export default BusinessResults;
