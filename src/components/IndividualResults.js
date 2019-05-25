@@ -36,8 +36,10 @@ const IndividualResults = ({
               <h3>CONGRATULATIONS!</h3>
               <h3>TOTAL SAVINGS</h3>
             </div> :
-            <div>
-              <h3>YOUR BENEFIT</h3>
+            <div className="benefits-message" >
+              <p>Whether you pay more or save, Universal Healthcare comes with life-changing benefits. 
+              Read more about the freedom, the peace-of-mind, and <a href="https://wholewashington.org/benefits/" 
+              target="_blank" rel="noopener noreferrer">what all is included here</a>.</p>
             </div>
           }
           </div>
@@ -92,7 +94,7 @@ const IndividualResults = ({
         <div className="wwse-results-contributions-container">
           <ContributionsRow
             link="https://wholewashington.org/employee-payroll-deduction/"
-            title="Employee Payroll Deduction"
+            title="Employee Payroll Deduction*"
             contribution={parseInt(healthcareContributionFromWages)}
           />
           <ContributionsRow
@@ -128,7 +130,7 @@ const IndividualResults = ({
             <div className="wwse-contributions-row">
               <p className="wwse-contributions-row-heading">
                 <a href="https://wholewashington.org/monthly-premium/" 
-                target="_blank" rel="noopener noreferrer">Per Adult Monthly Premium</a><sup>*</sup>
+                target="_blank" rel="noopener noreferrer">Per Adult Monthly Premium*</a>
               </p>
               <p className="wwse-contributions-row-result">
                 $
@@ -142,11 +144,19 @@ const IndividualResults = ({
               </p>
             </div>
             <p className="wwse-premium-disclaimer">
-              <sup>*</sup> Employers may choose to pay the Monthly Premium as part of their benefits.
+              *Employers may choose to pay these amounts as part of their benefits package.
             </p>
           </div>
         </div>
-
+        {savings > 0 ? 
+        <div className="wwse-results-total-box wwse-results-box-new">
+          <div className="benefits-message" >
+              <p>Whether you pay more or save, Universal Healthcare comes with life-changing benefits. 
+              Read more about the freedom, the peace-of-mind, and <a href="https://wholewashington.org/benefits/" 
+              target="_blank" rel="noopener noreferrer">what all is included here</a>.</p>
+          </div>
+        </div>
+        : ''}
       <CalculationDocs/>
     </div>
   )
