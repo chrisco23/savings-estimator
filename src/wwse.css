@@ -606,3 +606,8 @@
 .wwse-button .submit-button {
 	min-width: 148px;
 }
+
+.wwse-startover {
+	padding-top: 20px;
+	text-align: center;
+}
