@@ -609,5 +609,8 @@
 
 .wwse-startover {
 	padding-top: 20px;
-	text-align: center;
+}
+
+.wwse-startover button {
+	margin 0 auto;
 }
