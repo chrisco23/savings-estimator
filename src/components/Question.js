@@ -87,7 +87,7 @@ class Question extends Component {
     };
     if(index===-1 || (index>0 && !questionArray[index+1])){
       rBtnVisibile = {visibility:'hidden'};
-      nextOrSubmit = 'Submit';
+      nextOrSubmit = 'SUBMIT';
     }
 
     return (
