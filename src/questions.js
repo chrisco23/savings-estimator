@@ -70,7 +70,7 @@ const questions = {
 			questionSubtext:"Enter the total Net Profits for all sole proprietors in the household",
 			inputType:'text',
 			unit:'$',
-			tip:'<p>Use the mount in Line 31 from your Schedule C (2017 and 2018).</p><p>This amount is used to calculate the ' +
+			tip:'<p>Use the amount in Line 31 from your Schedule C (2017 and 2018).</p><p>This amount is used to calculate the ' +
 				'<a href="https://wholewashington.org/self-employment-contribution/" rel="noopener noreferrer" target="_blank">Self-Employment Contribution</a>.</p>' + 
 				'<ul><li>If Net Profits from Self-Employment are less than $15,000, the tax does not apply</li>' +
 				'<li>This tax is assessed yearly and paid with other business excise taxes.</li></ul>',
