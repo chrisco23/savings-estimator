@@ -37,10 +37,15 @@ const questions = {
 			questionSubtext:"Enter your AGI or MAGI, not Gross Income",
 			inputType:'text',
 			unit:'$',
-			tip: "<p>Adjusted gross income (AGI) is an individual or joint couple's " +
-				'total gross income minus specific deductions. income. To find your ' + 
-				'AGI, refer to last year\'s tax return or use the ' +
-				'<a href="http://money.cnn.com/tmp/networth2.html" rel="noopener noreferrer" target="_blank">AGI Calculator</a>.</p>' +
+			tip: "<p>Adjusted Gross Income (AGI) is an individual or joint couple's " +
+				'total gross income minus specific deductions.</p>' + 
+				'<span style="text-align: center">' +
+				'<p>Use the ' +
+				'<a href="http://money.cnn.com/tmp/networth2.html" rel="noopener noreferrer" target="_blank">AGI Calculator</a> ' +
+				'to see what\'s included / deduced OR</p>' +
+				'<p>Find ' +
+				'<a href="https://www.irs.gov/e-file-providers/definition-of-adjusted-gross-income" rel="noopener noreferrer" target="_blank">Adjusted Gross Income</a> ' +
+				'on last year\'s tax return.' +
 				'<table class="agi-table"><tr><th><strong>If you filed...</strong>' +
 				'</th><th><strong>Look for line...</strong></th></tr><tr><td>Form 1040 (2018)</td>' +
 				'<td>37</td></tr><tr><td>Form 1040A (2018)</td><td>21</td></tr><tr><td>' +
@@ -53,20 +58,20 @@ const questions = {
       id: 'agi'
 		},
 		{
-			questionText: "Wages from an Employer",
-			questionSubtext: "Enter the total Gross Pay Per Year for all wage earners in the household",
+			questionText: "Your Wages from an Employer",
+			questionSubtext: "Enter the total Gross Pay per Year for all wage earners in the household",
 			inputType:'text',
 			unit:'$',
-			tip: '<p>If you are 65 years or older, enter "0".</p>' +
-				'<p>This amount is used to calculate your ' +
-				'<a href="https://wholewashington.org/employee-payroll-deduction/" rel="noopener noreferrer" target="_blank">Employee Payroll Deduction</a>. ' +
-				'This tax is assessed quarterly and collected by your employer.</p>' +
+			tip: '<p>This amount is used to calculate your ' +
+				'<a href="https://wholewashington.org/employee-payroll-deduction/" rel="noopener noreferrer" target="_blank">Employee Payroll Deduction</a>, ' +
+				'which is assessed quarterly and collected by your employer.</p>' +
+				'<p>If you had wages and are 65 years or older, enter \'0\'; the Employee Payroll Deduction will not apply to you.</p>' +
 				'<p>Note: your employer may choose to pay this amount on your behalf as an employment benefit.</p>',
       showIcon:true,
       id: 'gppy'
 		},
 		{
-			questionText:"Profits from Self-Employment",
+			questionText:"Your Profits from Self-Employment",
 			questionSubtext:"Enter the total Net Profits for all sole proprietors in the household",
 			inputType:'text',
 			unit:'$',
@@ -82,7 +87,7 @@ const questions = {
 			questionSubtext:"Enter your profits made from investments held longer than 12 months",
 			inputType:'text',
 			unit:'$',
-			tip:'<p>Use the amount in Line 15 from your Schedule D (2017 and 2018).</p>' +
+			tip:'<p>Use the amount in Line 15 from your Schedule D (2017 and 2018).  If you had a loss, enter \'0\'.</p>' +
 				'<ul><li>This tax contribution will not apply to Home Sales, Farm Income or Retirement Accounts</li></ul>' +
 				'<p>This amount will be used to calculate your ' + 
 				'<a href="https://wholewashington.org/investment-profit-contribution/" rel="noopener noreferrer" target="_blank">Investment Profit Contribution</a>.</p>' +
