@@ -606,3 +606,23 @@
 .wwse-button .submit-button {
 	min-width: 148px;
 }
+
+.wwse-startover {
+	padding-top: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+.wwse-startover button {
+	font-size: 100%
+}
+
+.wwse-credit {
+	padding-top: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+.wwse-credit p {
+	font-size: 12px;
+}

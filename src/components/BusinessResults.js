@@ -113,6 +113,10 @@ const BusinessResults = ({
       <div className="wwse-startover">
         <button onClick={refreshPage}>Start Over</button>
       </div>
+      <div className="wwse-credit">
+        <p>This tool would not be possible without the amazing talent and effort of the team at <a href="https://www.progcode.org/" 
+          target="_blank" rel="noopener noreferrer">Progressive Coders Network</a>.</p>
+      </div>
     </div>
   );
 }
