@@ -16,7 +16,7 @@ This app was built entirely in **ReactJS**.
 
 **Deployed @**
 
-[Saveings Estimator - Whole Washington](https://wholewashington.org/savings-estimator/)
+[Savings Estimator - Whole Washington](https://wholewashington.org/savings-estimator/)
 
 ### Press Release
 
