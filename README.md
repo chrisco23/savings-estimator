@@ -3,7 +3,7 @@
 ### About
 The project is a collaborative effort between Marc Glasser, the volunteers of the [Progressive Coders Network](https://www.progcode.org/), and the [Whole Washington Organization](https://www.wholewashington.org/).
 
-Our goal was to design a self-contained app that could be embedded in any website to help users (in our case, voters) compare their current healthcare costs against future costs under a new ballot initiative proposing healthcare reform. The app was first develooped for Whole Washington's I-1600 ballot initiaive in 2017 and later revised for Washington State House bill SB 5222.
+Our goal was to design a self-contained app that could be embedded in any website to help users (in our case, voters) compare their current healthcare costs against future costs under a new ballot initiative proposing healthcare reform. The app was first develooped for Whole Washington's I-1600 ballot initiaive in 2018 and later revised for Washington State House bill SB 5222.
 
 The user is walked through a series of questions and form fields to enter data. They can track their current position in the list of questions via a progress bar, and recieve a calculation of their results at the end.
 
