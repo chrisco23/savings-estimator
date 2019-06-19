@@ -1,7 +1,5 @@
 ## Healthcare Savings Estimator
 
-[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://github.com/chrisco23/savings-estimator)
-
 ### About
 The project is a collaborative effort between Marc Glasser, the volunteers of the [Progressive Coders Network](https://www.progcode.org/), and the [Whole Washington Organization](https://www.wholewashington.org/).
 
