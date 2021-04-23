@@ -47,9 +47,9 @@ const questions = {
 				'<a href="https://www.irs.gov/e-file-providers/definition-of-adjusted-gross-income" rel="noopener noreferrer" target="_blank">Adjusted Gross Income</a> ' +
 				'on last year\'s tax return.' +
 				'<table class="agi-table"><tr><th><strong>If you filed...</strong>' +
-				'</th><th><strong>Look for line...</strong></th></tr><tr><td>Form 1040 (2018)</td>' +
-				'<td>37</td></tr><tr><td>Form 1040A (2018)</td><td>21</td></tr><tr><td>' +
-				'Form 1040EZ (2018)</td><td>4</td></tr></table>' + 
+				'</th><th><strong>Look for line...</strong></th></tr><tr><td>Form 1040 (2020)</td>' +
+				'<td>11</td></tr><tr><td>Form 1040A (2020)</td><td>8b</td></tr>' +
+				'</table>' + 
 				'<p>This amount is used in conjunction with household size to determine the ' +
 				'<a href="https://wholewashington.org/monthly-premium/" rel="noopener noreferrer" target="_blank">Monthly Premium</a>.</p>' +
 				'<p>Note: your employer may choose to pay this amount on your behalf as an employment benefit.</p>',
@@ -75,7 +75,7 @@ const questions = {
 			questionSubtext:"Enter the total Net Profits for all sole proprietors in the household",
 			inputType:'text',
 			unit:'$',
-			tip:'<p>Use the amount in Line 31 from your Schedule C (2017 and 2018).</p><p>This amount is used to calculate the ' +
+			tip:'<p>Use the amount in Line 31 from your Schedule C.</p><p>This amount is used to calculate the ' +
 				'<a href="https://wholewashington.org/self-employment-contribution/" rel="noopener noreferrer" target="_blank">Self-Employment Contribution</a>.</p>' + 
 				'<ul><li>If Net Profits from Self-Employment are less than $15,000, the tax does not apply</li>' +
 				'<li>This tax is assessed yearly and paid with other business excise taxes.</li></ul>',
@@ -87,7 +87,7 @@ const questions = {
 			questionSubtext:"Enter your profits made from investments held longer than 12 months",
 			inputType:'text',
 			unit:'$',
-			tip:'<p>Use the amount in Line 15 from your Schedule D (2017 and 2018).  If you had a loss, enter \'0\'.</p>' +
+			tip:'<p>Use the amount in Line 15 from your Schedule D.  If you had a loss, enter \'0\'.</p>' +
 				'<ul><li>This tax contribution will not apply to Home Sales, Farm Income or Retirement Accounts</li></ul>' +
 				'<p>This amount will be used to calculate your ' + 
 				'<a href="https://wholewashington.org/investment-profit-contribution/" rel="noopener noreferrer" target="_blank">Investment Profit Contribution</a>.</p>' +
