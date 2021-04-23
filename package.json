@@ -4,15 +4,15 @@
   "private": true,
   "homepage": "https://github.com/chrisco23/savings-estimator",
   "dependencies": {
-    "html-react-parser": "^0.7.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-modal": "^3.2.1",
-    "react-redux": "^5.0.7",
-    "react-scripts": "^3.0.0",
+    "html-react-parser": "^0.7.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-modal": "^3.13.1",
+    "react-redux": "^5.1.2",
+    "react-scripts": "^3.4.4",
     "react-transition-group": "^2.2.1",
-    "redux": "^4.0.0",
-    "uglifyjs-webpack-plugin": "^2.1.2"
+    "redux": "^4.0.5",
+    "uglifyjs-webpack-plugin": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "uuidv1": "^1.5.20",
-    "webpack-cli": "^3.3.1"
+    "webpack-cli": "^3.3.12"
   },
   "browserslist": {
     "production": [
