@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "/yes-on-1600/static/css/main.fa3ff4a0.chunk.css",
-    "main.js": "/yes-on-1600/static/js/main.20d62fd2.chunk.js",
-    "main.js.map": "/yes-on-1600/static/js/main.20d62fd2.chunk.js.map",
-    "runtime~main.js": "/yes-on-1600/static/js/runtime~main.4854cec5.js",
-    "runtime~main.js.map": "/yes-on-1600/static/js/runtime~main.4854cec5.js.map",
-    "static/js/2.a76a496e.chunk.js": "/yes-on-1600/static/js/2.a76a496e.chunk.js",
-    "static/js/2.a76a496e.chunk.js.map": "/yes-on-1600/static/js/2.a76a496e.chunk.js.map",
-    "index.html": "/yes-on-1600/index.html",
-    "precache-manifest.f56b49f5fcf0b6b90ea47612a4442095.js": "/yes-on-1600/precache-manifest.f56b49f5fcf0b6b90ea47612a4442095.js",
-    "service-worker.js": "/yes-on-1600/service-worker.js",
-    "static/css/main.fa3ff4a0.chunk.css.map": "/yes-on-1600/static/css/main.fa3ff4a0.chunk.css.map"
-  }
+    "main.css": "/chrisco23/savings-estimator/static/css/main.068bdf4e.chunk.css",
+    "main.js": "/chrisco23/savings-estimator/static/js/main.6338abcc.chunk.js",
+    "main.js.map": "/chrisco23/savings-estimator/static/js/main.6338abcc.chunk.js.map",
+    "runtime-main.js": "/chrisco23/savings-estimator/static/js/runtime-main.d0b75627.js",
+    "runtime-main.js.map": "/chrisco23/savings-estimator/static/js/runtime-main.d0b75627.js.map",
+    "static/js/2.bed2d1ec.chunk.js": "/chrisco23/savings-estimator/static/js/2.bed2d1ec.chunk.js",
+    "static/js/2.bed2d1ec.chunk.js.map": "/chrisco23/savings-estimator/static/js/2.bed2d1ec.chunk.js.map",
+    "index.html": "/chrisco23/savings-estimator/index.html",
+    "precache-manifest.546b5958417609f287bdb73d9be4e6ad.js": "/chrisco23/savings-estimator/precache-manifest.546b5958417609f287bdb73d9be4e6ad.js",
+    "service-worker.js": "/chrisco23/savings-estimator/service-worker.js",
+    "static/css/main.068bdf4e.chunk.css.map": "/chrisco23/savings-estimator/static/css/main.068bdf4e.chunk.css.map",
+    "static/js/2.bed2d1ec.chunk.js.LICENSE.txt": "/chrisco23/savings-estimator/static/js/2.bed2d1ec.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d0b75627.js",
+    "static/js/2.bed2d1ec.chunk.js",
+    "static/css/main.068bdf4e.chunk.css",
+    "static/js/main.6338abcc.chunk.js"
+  ]
 }
