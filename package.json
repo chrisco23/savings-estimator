@@ -2,7 +2,7 @@
   "name": "savings-estimator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/chrisco23/savings-estimator",
+  "homepage": "https://robfenwick.com/wp-content/plugins/savings-estimator/js/",
   "dependencies": {
     "html-react-parser": "^0.7.1",
     "react": "^16.14.0",
