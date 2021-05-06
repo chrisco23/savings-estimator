@@ -2,7 +2,7 @@
   "name": "savings-estimator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://robfenwick.com/wp-content/plugins/savings-estimator/",
+  "homepage": "https://robfenwick.com/wp-content/plugins/savings-estimator/js/",
   "dependencies": {
     "html-react-parser": "^0.7.1",
     "react": "^16.14.0",
@@ -12,6 +12,7 @@
     "react-scripts": "^3.4.4",
     "react-transition-group": "^2.2.1",
     "redux": "^4.0.5",
+    "rewire": "^5.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0"
   },
   "scripts": {
@@ -24,7 +25,7 @@
     "predeploy": "npm run build"
   },
   "devDependencies": {
-    "rewire": "^5.0.0",
+    "@wordpress/scripts": "^15.0.1",
     "uuidv1": "^1.5.20",
     "webpack-cli": "^3.3.12"
   },
